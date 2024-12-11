@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Lessons with Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f5ff; /* Light yellow */
+            color: #4b0082; /* Purple */
+        }
+        header {
+            background-color: #ffd700; /* Golden yellow */
+            color: #4b0082;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 10px 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .price-caption {
+            background-color: #4b0082;
+            color: #fff;
+            padding: 10px;
+            margin: 20px 0;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .packs {
+            background-color: #fff8dc; /* Light cream yellow */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+        .packs h2 {
+            color: #4b0082;
+        }
+        footer {
+            text-align: center;
+            background-color: #ffd700;
+            color: #4b0082;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .language-switcher {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .language-switcher button {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4b0082;
+            color: #fff;
+            cursor: pointer;
+        }
+        .language-switcher button:hover {
+            background-color: #ffd700;
+            color: #4b0082;
+        }
+    </style>
+    <script>
+        const translations = {
+            en: {
+                title: "French Lessons with Meriem",
+                intro: "Experienced French Teacher - Over 10 Years of Teaching Excellence",
+                description: "I have extensive experience teaching French online to kids, students, professionals, and diplomats. Whether you're starting from scratch, preparing for exams, improving pronunciation, mastering grammar, or writing official essays and dissertations, I can help you achieve your goals.",
+                languages: "Languages spoken: French, English, Arabic, German",
+                rate: "Rate: €15 for 90 minutes (1.5 hours)",
+                packsTitle: "Special Packs",
+                pack1: "12 Lessons (90 minutes each): €150/month",
+                pack2: "Pronunciation Pack (3 times/week): €200/month",
+                footer: "Contact me to start your French journey online today!"
+            },
+            ar: {
+                title: "دروس اللغة الفرنسية مع مريم",
+                intro: "مدرسة لغة فرنسية ذات خبرة - أكثر من 10 سنوات من التميز",
+                description: "لدي خبرة واسعة في تدريس اللغة الفرنسية عبر الإنترنت للأطفال والطلاب والمحترفين والدبلوماسيين. سواء كنت تبدأ من الصفر، تستعد للامتحانات، تحسن النطق، تتقن القواعد، أو تكتب مقالات رسمية وأطروحات، يمكنني مساعدتك في تحقيق أهدافك.",
+                languages: "اللغات التي أتحدثها: الفرنسية، الإنجليزية، العربية، الألمانية",
+                rate: "التكلفة: 15 يورو لـ 90 دقيقة (ساعة ونصف)",
+                packsTitle: "الباقات الخاصة",
+                pack1: "12 درسًا (كل درس 90 دقيقة): 150 يورو/الشهر",
+                pack2: "باقة النطق (3 مرات في الأسبوع): 200 يورو/الشهر",
+                footer: "اتصل بي لبدء رحلتك في تعلم اللغة الفرنسية عبر الإنترنت اليوم!"
+            },
+            de: {
+                title: "Französischunterricht mit Meriem",
+                intro: "Erfahrene Französischlehrerin - Über 10 Jahre Lehrerfahrung",
+                description: "Ich habe umfangreiche Erfahrung im Unterrichten von Französisch online für Kinder, Studenten, Fachleute und Diplomaten. Egal, ob Sie von Grund auf beginnen, sich auf Prüfungen vorbereiten, Ihre Aussprache verbessern, Grammatik beherrschen oder offizielle Essays und Dissertationen schreiben, ich kann Ihnen helfen, Ihre Ziele zu erreichen.",
+                languages: "Gesprochene Sprachen: Französisch, Englisch, Arabisch, Deutsch",
+                rate: "Preis: 15 € für 90 Minuten (1,5 Stunden)",
+                packsTitle: "Spezialpakete",
+                pack1: "12 Lektionen (jeweils 90 Minuten): 150 €/Monat",
+                pack2: "Aussprachepaket (3 Mal pro Woche): 200 €/Monat",
+                footer: "Kontaktieren Sie mich, um Ihre Französischreise online noch heute zu beginnen!"
+            }
+        };
+
+        function switchLanguage(lang) {
+            document.querySelector("h1").textContent = translations[lang].title;
+            document.querySelector("header p").textContent = translations[lang].intro;
+            document.querySelector(".description").textContent = translations[lang].description;
+            document.querySelector(".languages").textContent = translations[lang].languages;
+            document.querySelector(".price-caption").textContent = translations[lang].rate;
+            document.querySelector(".packs h2").textContent = translations[lang].packsTitle;
+            document.querySelector(".pack1").textContent = translations[lang].pack1;
+            document.querySelector(".pack2").textContent = translations[lang].pack2;
+            document.querySelector("footer p").textContent = translations[lang].footer;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>French Lessons with Meriem</h1>
+        <p>Experienced French Teacher - Over 10 Years of Teaching Excellence</p>
+    </header>
+    <div class="language-switcher">
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('ar')">العربية</button>
+        <button onclick="switchLanguage('de')">Deutsch</button>
+    </div>
+    <section>
+        <p class="description">I have extensive experience teaching French online to kids, students, professionals, and diplomats. Whether you're starting from scratch, preparing for exams, improving pronunciation, mastering grammar, or writing official essays and dissertations, I can help you achieve your goals.</p>
+        <p class="languages">Languages spoken: French, English, Arabic, German</p>
+        <div class="price-caption">Rate: €15 for 90 minutes (1.5 hours)</div>
+        <div class="packs">
+            <h2>Special Packs</h2>
+            <ul>
+                <li class="pack1">12 Lessons (90 minutes each): €150/month</li>
+                <li class="pack2">Pronunciation Pack (3 times/week): €200/month</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>Contact me to start your French journey online today!</p>
+    </footer>
+</body>
+</html>
